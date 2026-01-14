@@ -18,6 +18,10 @@ function convertToObject(sourceString) {
 
     const index = part.indexOf(':');
 
+    if (index === -1) {
+      return;
+    }
+
     const key = part.slice(0, index).trim();
     const value = part.slice(index + 1).trim();
 
